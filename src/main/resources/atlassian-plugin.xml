@@ -9,5 +9,13 @@
 
     <!-- add our i18n resource -->
     <resource type="i18n" name="i18n" location="servicedesk-automation-extension"/>
+
+    <automation-rule-when-handler key="issue-assignee-changed-tutorial-when-handler" name="Issue assignee changed" name-i18n-key="tutorial.when.handler.issue.assignee.changed">
+        <icon-class>bp-jira</icon-class>
+        <provides>
+            <provide>issue</provide>
+            <provide>user</provide>
+        </provides>
+    </automation-rule-when-handler>
     
 </atlassian-plugin>
