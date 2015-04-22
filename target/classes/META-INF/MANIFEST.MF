@@ -1,0 +1,40 @@
+Manifest-Version: 1.0
+Atlassian-Build-Date: 2015-04-22T18:15:54+1000
+Atlassian-Plugin-Key: com.atlassian.plugins.tutorial.servicedesk.service
+ desk-automation-extension
+Bnd-LastModified: 1429690554846
+Build-Jdk: 1.8.0_45
+Built-By: ahynes
+Bundle-Description: Adds a new when, if and then rule component to JIRA 
+ Service Desk's automation feature.
+Bundle-DocURL: http://www.atlassian.com.com/
+Bundle-ManifestVersion: 2
+Bundle-Name: servicedesk-automation-extension
+Bundle-SymbolicName: com.atlassian.plugins.tutorial.servicedesk.serviced
+ esk-automation-extension
+Bundle-Vendor: Atlassian
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Import-Package: com.atlassian.servicedesk.plugins.automation.api.executi
+ on.command;version="${parsedVersion.osgiVersion}",com.atlassian.service
+ desk.plugins.automation.api.execution.context.project;version="${parsed
+ Version.osgiVersion}",com.atlassian.servicedesk.plugins.automation.api.
+ execution.context.user;version="${parsedVersion.osgiVersion}",com.atlas
+ sian.servicedesk.plugins.automation.api.execution.message;version="${pa
+ rsedVersion.osgiVersion}",com.atlassian.servicedesk.plugins.automation.
+ api.execution.message.helper;version="${parsedVersion.osgiVersion}",com
+ .atlassian.servicedesk.plugins.automation.api.execution.rule;version="$
+ {parsedVersion.osgiVersion}",com.atlassian.servicedesk.plugins.automati
+ on.api.execution.whenhandler;version="${parsedVersion.osgiVersion}",com
+ .atlassian.servicedesk.plugins.automation.spi.rulewhen.event;version="$
+ {parsedVersion.osgiVersion}",com.atlassian.crowd.embedded.api,com.atlas
+ sian.fugue,com.atlassian.jira.event.issue,com.atlassian.jira.issue,com.
+ atlassian.jira.issue.changehistory,com.atlassian.jira.issue.history,com
+ .atlassian.jira.permission,com.atlassian.jira.project,com.atlassian.jir
+ a.security,com.atlassian.jira.security.plugin,com.atlassian.jira.user,c
+ om.atlassian.jira.user.util,com.atlassian.sal.api,javax.annotation,org.
+ apache.commons.lang,org.ofbiz.core.entity,org.slf4j,org.springframework
+ .beans.factory.annotation,org.springframework.stereotype
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
+Spring-Context: *
+Tool: Bnd-2.4.0.201411031534

@@ -35,6 +35,38 @@
             <scope>provided</scope>
         </dependency>
         -->
+
+        <dependency>
+            <groupId>com.atlassian.servicedesk.plugins.automation</groupId>
+            <artifactId>servicedesk-automation-api</artifactId>
+            <version>${servicedesk.automation.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.servicedesk.plugins.automation</groupId>
+            <artifactId>servicedesk-automation-spi</artifactId>
+            <version>${servicedesk.automation.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.context</artifactId>
+            <version>${springframework.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.pocketknife</groupId>
+            <artifactId>atlassian-pocketknife-api-commons-jira</artifactId>
+            <version>${pocketknife.api.commons.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.fugue</groupId>
+            <artifactId>fugue</artifactId>
+            <version>${fugue.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -93,6 +125,21 @@
 						</pluginArtifact>
 					</pluginArtifacts>
 					-->
+                    <instructions>
+                        <Atlassian-Plugin-Key>
+                            com.atlassian.plugins.tutorial.servicedesk.servicedesk-automation-extension
+                        </Atlassian-Plugin-Key>
+                        <Bundle-SymbolicName>
+                            com.atlassian.plugins.tutorial.servicedesk.servicedesk-automation-extension
+                        </Bundle-SymbolicName>
+                        <Spring-Context>*</Spring-Context>
+                        <Export-Package></Export-Package>
+                        <Import-Package>
+                            com.atlassian.servicedesk.plugins.automation.api.*;version="${parsedVersion.osgiVersion}",
+                            com.atlassian.servicedesk.plugins.automation.spi.*;version="${parsedVersion.osgiVersion}",
+                            *
+                        </Import-Package>
+                    </instructions>
                 </configuration>
             </plugin>
             <plugin>
@@ -111,6 +158,10 @@
         <plugin.testrunner.version>1.2.3</plugin.testrunner.version>
 		<!-- TestKit version 5.x for JIRA 5.x, 6.x for JIRA 6.x -->
 		<testkit.version>5.2.26</testkit.version>
+        <servicedesk.automation.version>0.27.2</servicedesk.automation.version>
+        <springframework.version>2.5.6.SEC01</springframework.version>
+        <pocketknife.api.commons.version>0.19</pocketknife.api.commons.version>
+        <fugue.version>2.1.0</fugue.version>
     </properties>
 
 </project>

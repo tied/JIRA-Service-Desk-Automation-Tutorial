@@ -1,0 +1,5 @@
+com/atlassian/plugins/tutorial/servicedesk/MyPluginComponent.class
+com/atlassian/plugins/tutorial/servicedesk/when/ProjectAndUserChecker$1.class
+com/atlassian/plugins/tutorial/servicedesk/when/ProjectAndUserChecker.class
+com/atlassian/plugins/tutorial/servicedesk/MyPluginComponentImpl.class
+com/atlassian/plugins/tutorial/servicedesk/when/AssigneeChangedEventWhenHandler.class
