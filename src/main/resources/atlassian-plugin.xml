@@ -17,5 +17,10 @@
             <provide>user</provide>
         </provides>
     </automation-rule-when-handler>
+
+    <automation-rule-event-when-handler key="issue-assignee-changed-tutorial-event-when-handler"
+                                        class="com.atlassian.plugins.tutorial.servicedesk.when.AssigneeChangedEventWhenHandler">
+        <automation-rule-when-handler module-key="issue-assignee-changed-tutorial-when-handler" />
+    </automation-rule-event-when-handler>
     
 </atlassian-plugin>
