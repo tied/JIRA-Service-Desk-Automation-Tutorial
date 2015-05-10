@@ -22,5 +22,16 @@
                                         class="com.atlassian.plugins.tutorial.servicedesk.when.AssigneeChangedEventWhenHandler">
         <automation-rule-when-handler module-key="issue-assignee-changed-tutorial-when-handler" />
     </automation-rule-event-when-handler>
+
+    <automation-rule-if-condition key="user-email-domain-tutorial-if-condition" class="com.atlassian.plugins.tutorial.servicedesk.if.UserEmailDomainIfCondition" name="User email domain"
+                                  i18n-name-key="tutorial.if.condition.user.email.domain">
+        <icon-class>user</icon-class>
+        <requires>
+            <require>user</require>
+        </requires>
+        <visualiser class="com.atlassian.plugins.tutorial.servicedesk.if.UserEmailDomainIfConditionVisualiser" />
+        <validator class="com.atlassian.plugins.tutorial.servicedesk.if.UserEmailDomainIfConditionValidator"/>
+        <web-form-module>servicedesk/settings/automation/tutorial/modules/if/user-email-domain-if-condition-form</web-form-module>
+    </automation-rule-if-condition>
     
 </atlassian-plugin>
