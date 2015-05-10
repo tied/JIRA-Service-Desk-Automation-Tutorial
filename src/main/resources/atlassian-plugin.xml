@@ -23,7 +23,7 @@
         <automation-rule-when-handler module-key="issue-assignee-changed-tutorial-when-handler" />
     </automation-rule-event-when-handler>
 
-    <automation-rule-if-condition key="user-email-domain-tutorial-if-condition" class="com.atlassian.plugins.tutorial.servicedesk.if.UserEmailDomainIfCondition" name="User email domain"
+    <automation-rule-if-condition key="user-email-domain-tutorial-if-condition" class="com.atlassian.plugins.tutorial.servicedesk.ruleif.UserEmailDomainIfCondition" name="User email domain"
                                   i18n-name-key="tutorial.if.condition.user.email.domain">
         <icon-class>user</icon-class>
         <requires>
