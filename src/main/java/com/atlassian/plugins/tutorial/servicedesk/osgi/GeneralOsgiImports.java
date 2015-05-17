@@ -24,6 +24,7 @@ public class GeneralOsgiImports
     @ComponentImport com.atlassian.servicedesk.plugins.automation.api.execution.message.helper.UserMessageHelper userMessageHelper;
     @ComponentImport com.atlassian.servicedesk.plugins.automation.api.execution.message.RuleMessageBuilderService ruleMessageBuilderService;
     @ComponentImport com.atlassian.servicedesk.plugins.automation.api.execution.error.IfConditionErrorHelper ifConditionErrorHelper;
+    @ComponentImport com.atlassian.servicedesk.plugins.automation.api.execution.error.ThenActionErrorHelper thenActionErrorHelper;
 
     @ComponentImport com.atlassian.servicedesk.plugins.automation.api.execution.command.RuleExecutionCommandBuilderService ruleExecutionCommandBuilderService;
 

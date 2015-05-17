@@ -55,7 +55,7 @@ public final class IssueLabelThenActionVisualiser implements RuleComponentVisual
 
         if(configuredLabelOpt.isDefined())
         {
-            return some(configuredLabelOpt.get());
+            return some("\"" + configuredLabelOpt.get() + "\"");
         }
         else
         {

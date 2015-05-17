@@ -1,17 +1,17 @@
-define("servicedesk/settings/automation/tutorial/modules/ruleif/useremaildomain-if-condition-form", [
+define("servicedesk/settings/automation/tutorial/modules/rulethen/issue-label-then-action-form", [
     "servicedesk/jQuery",
     "servicedesk/underscore",
-    "servicedesk/settings/automation/tutorial/modules/ruleif/useremaildomain-if-condition-model",
-    "servicedesk/settings/automation/tutorial/modules/ruleif/useremaildomain-if-condition-view"
+    "servicedesk/settings/automation/tutorial/modules/rulethen/issue-label-then-action-model",
+    "servicedesk/settings/automation/tutorial/modules/rulethen/issue-label-then-action-view"
 ], function (
         $,
         _,
-        UserEmailDomainModel,
-        UserEmailDomainView
+        IssueLabelModel,
+        IssueLabelView
 ) {
 
-    var userEmailDomainView = function(controller) {
-        var template = ServiceDesk.Templates.Agent.Settings.Automation.Tutorial.Modules.RuleIf.serviceDeskUserEmailDomainIfConditionContainer;
+    var issueLabelView = function(controller) {
+        var template = ServiceDesk.Templates.Agent.Settings.Automation.Tutorial.Modules.RuleThen.serviceDeskIssueLabelThenActionContainer;
         var $el = $(controller.el);
 
         function onError(errors) {
@@ -42,16 +42,16 @@ define("servicedesk/settings/automation/tutorial/modules/ruleif/useremaildomain-
 
         return {
             render: function(config, errors) {
-                var emailDomain = config && config.emailDomain ? config.emailDomain : "";
+                var issueLabel = config && config.issueLabel ? config.issueLabel : "";
 
                 // Render the template
                 $el.html(template());
 
-                this.issueLabelView = new UserEmailDomainView({
-                    model: new UserEmailDomainModel({
-                        emailDomain: emailDomain
+                this.issueLabelView = new IssueLabelView({
+                    model: new IssueLabelModel({
+                        issueLabel: issueLabel
                     }),
-                    el: $el.find(".automation-servicedesk-email-domain-if-condition-container")
+                    el: $el.find(".automation-servicedesk-issue-label-then-action-container")
                 }).render();
 
                 if (errors) {
@@ -69,18 +69,18 @@ define("servicedesk/settings/automation/tutorial/modules/ruleif/useremaildomain-
 
             serialize: function () {
                 return {
-                    emailDomain: $el.find('input').val()
+                    issueLabel: $el.find('input').val()
                 }
             },
 
             validate: function (deferred) {
                 $el.find('.error').remove();
                 var hasError = false;
-                var emailDomainField = $el.find('input');
+                var issueLabelField = $el.find('input');
                 var fieldErrors = {};
 
-                if (!emailDomainField.val()) {
-                    fieldErrors[emailDomainField.attr('name')] = AJS.I18n.getText('tutorial.if.condition.user.email.domain.error.missing');
+                if (!issueLabelField.val()) {
+                    fieldErrors[issueLabelField.attr('name')] = AJS.I18n.getText('tutorial.then.action.issue.label.error.missing');
                     hasError = true;
                 }
 
@@ -102,6 +102,6 @@ define("servicedesk/settings/automation/tutorial/modules/ruleif/useremaildomain-
     };
 
     return function(controller) {
-        return userEmailDomainView(controller);
+        return issueLabelView(controller);
     };
 });

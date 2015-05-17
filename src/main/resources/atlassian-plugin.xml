@@ -36,7 +36,7 @@
 
     <automation-rule-then-action key="issue-label-tutorial-then-action" class="com.atlassian.plugins.tutorial.servicedesk.rulethen.IssueLabelThenAction" name="Add label to issue"
                                   name-i18n-key="tutorial.then.action.issue.label.name">
-        <icon-class>issue</icon-class>
+        <icon-class>bp-jira</icon-class>
         <requires>
             <require>issue</require>
         </requires>

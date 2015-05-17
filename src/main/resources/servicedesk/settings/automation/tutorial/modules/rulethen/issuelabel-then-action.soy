@@ -1,0 +1,17 @@
+{namespace ServiceDesk.Templates.Agent.Settings.Automation.Tutorial.Modules.RuleThen}
+
+/**
+ * Draw the container for the service desk issue label then action
+ */
+{template .serviceDeskIssueLabelThenActionContainer}
+    <div class="automation-servicedesk-issue-label-then-action-container"></div>
+{/template}
+
+/**
+ * Draw the contents of the issue label form
+ * @param issueLabel the issue label
+ */
+{template .drawIssueLabelForm}
+    <div class="automation-servicedesk-issue-label-then-action-header"><b>{getText('tutorial.then.action.issue.label.prompt')}</b></div>
+    <input type="text" name="emailDomain" value="{$issueLabel}">
+{/template}
