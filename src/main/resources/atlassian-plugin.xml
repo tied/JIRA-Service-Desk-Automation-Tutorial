@@ -34,6 +34,17 @@
         <web-form-module>servicedesk/settings/automation/tutorial/modules/ruleif/useremaildomain-if-condition-form</web-form-module>
     </automation-rule-if-condition>
 
+    <automation-rule-then-action key="issue-label-tutorial-then-action" class="com.atlassian.plugins.tutorial.servicedesk.rulethen.IssueLabelThenAction" name="Add label to issue"
+                                  name-i18n-key="tutorial.then.action.issue.label.name">
+        <icon-class>issue</icon-class>
+        <requires>
+            <require>issue</require>
+        </requires>
+        <visualiser class="com.atlassian.plugins.tutorial.servicedesk.rulethen.IssueLabelThenActionVisualiser" />
+        <validator class="com.atlassian.plugins.tutorial.servicedesk.rulethen.IssueLabelThenActionValidator"/>
+        <web-form-module>servicedesk/settings/automation/tutorial/modules/rulethen/issue-label-then-action-form</web-form-module>
+    </automation-rule-then-action>
+
     <client-resource key="servicedesk-modules-automation-resources">
         <context>sd.agent.view</context>
         <directory location="servicedesk/settings/automation/tutorial/modules" />
