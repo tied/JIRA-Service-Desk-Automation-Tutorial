@@ -37,6 +37,7 @@ public class GeneralOsgiImports
     @ComponentImport com.atlassian.jira.user.util.UserManager userManager;
     @ComponentImport com.atlassian.jira.util.I18nHelper i18nHelper;
     @ComponentImport com.atlassian.jira.util.I18nHelper.BeanFactory i18nBeanFactory;
+    @ComponentImport com.atlassian.jira.bc.issue.label.LabelService labelService;
 
     private GeneralOsgiImports()
     {
