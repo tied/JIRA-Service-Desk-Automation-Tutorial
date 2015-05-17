@@ -23,6 +23,7 @@ public class GeneralOsgiImports
     @ComponentImport com.atlassian.servicedesk.plugins.automation.api.execution.message.helper.CommentMessageHelper commentMessageHelper;
     @ComponentImport com.atlassian.servicedesk.plugins.automation.api.execution.message.helper.UserMessageHelper userMessageHelper;
     @ComponentImport com.atlassian.servicedesk.plugins.automation.api.execution.message.RuleMessageBuilderService ruleMessageBuilderService;
+    @ComponentImport com.atlassian.servicedesk.plugins.automation.api.execution.error.IfConditionErrorHelper ifConditionErrorHelper;
 
     @ComponentImport com.atlassian.servicedesk.plugins.automation.api.execution.command.RuleExecutionCommandBuilderService ruleExecutionCommandBuilderService;
 
@@ -34,6 +35,8 @@ public class GeneralOsgiImports
     @ComponentImport com.atlassian.jira.issue.IssueManager issueManager;
     @ComponentImport com.atlassian.jira.security.PermissionManager permissionManager;
     @ComponentImport com.atlassian.jira.user.util.UserManager userManager;
+    @ComponentImport com.atlassian.jira.util.I18nHelper i18nHelper;
+    @ComponentImport com.atlassian.jira.util.I18nHelper.BeanFactory i18nBeanFactory;
 
     private GeneralOsgiImports()
     {

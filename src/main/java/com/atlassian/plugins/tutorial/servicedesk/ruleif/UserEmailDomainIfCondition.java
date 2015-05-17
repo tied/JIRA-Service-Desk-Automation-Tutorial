@@ -18,7 +18,7 @@ import static com.atlassian.fugue.Either.right;
  */
 public final class UserEmailDomainIfCondition implements IfCondition
 {
-    static final String EMAIL_DOMAIN_KEY = "email.domain";
+    static final String EMAIL_DOMAIN_KEY = "emailDomain";
 
     private final UserMessageHelper userMessageHelper;
     private final IfConditionErrorHelper ifConditionErrorHelper;
@@ -68,7 +68,7 @@ public final class UserEmailDomainIfCondition implements IfCondition
     private String getEmailDomain(final ApplicationUser fromUser)
     {
         return fromUser.getEmailAddress().substring(
-                fromUser.getEmailAddress().indexOf('@')
+                fromUser.getEmailAddress().indexOf('@') + 1
         );
     }
 }

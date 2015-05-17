@@ -33,7 +33,7 @@ public final class UserEmailDomainIfConditionVisualiser implements RuleComponent
     @Override
     public String getName(final RuleComponentVisualiserParam ruleComponentVisualiserParam)
     {
-        return i18nHelper.getText("tutorial.if.condition.user.email.domain");
+        return i18nHelper.getText("tutorial.if.condition.user.email.domain.name");
     }
 
     /**

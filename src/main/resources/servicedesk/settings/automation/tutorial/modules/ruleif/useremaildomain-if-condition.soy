@@ -1,0 +1,17 @@
+{namespace ServiceDesk.Templates.Agent.Settings.Automation.Tutorial.Modules.RuleIf}
+
+/**
+ * Draw the container for the service desk user email domain if condition
+ */
+{template .serviceDeskUserEmailDomainIfConditionContainer}
+    <div class="automation-servicedesk-email-domain-if-condition-container"></div>
+{/template}
+
+/**
+ * Draw the contents of the user email domain form
+ * @param emailDomain the user's email domain
+ */
+{template .drawUserEmailDomainForm}
+    <div class="automation-servicedesk-email-domain-if-condition-header"><b>{getText('tutorial.if.condition.user.email.domain.prompt')}</b></div>
+    <input type="text" name="emailDomain" class="textarea automation-servicedesk-comment-textarea mentionable" value="{$emailDomain}">
+{/template}

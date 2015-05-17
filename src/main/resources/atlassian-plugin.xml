@@ -1,4 +1,4 @@
-<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+<atlassian-plugin key="com.atlassian.plugins.tutorial.servicedesk.servicedesk-automation-extension" name="${project.name}" plugins-version="2">
     <plugin-info>
         <description>${project.description}</description>
         <version>${project.version}</version>
@@ -8,7 +8,7 @@
     </plugin-info>
 
     <!-- add our i18n resource -->
-    <resource type="i18n" name="i18n" location="servicedesk-automation-extension"/>
+    <resource type="i18n" name="i18n" location="i18n/servicedesk-automation-extension"/>
 
     <automation-rule-when-handler key="issue-assignee-changed-tutorial-when-handler" name="Issue assignee changed" name-i18n-key="tutorial.when.handler.issue.assignee.changed">
         <icon-class>bp-jira</icon-class>
@@ -24,14 +24,19 @@
     </automation-rule-event-when-handler>
 
     <automation-rule-if-condition key="user-email-domain-tutorial-if-condition" class="com.atlassian.plugins.tutorial.servicedesk.ruleif.UserEmailDomainIfCondition" name="User email domain"
-                                  i18n-name-key="tutorial.if.condition.user.email.domain">
+                                  name-i18n-key="tutorial.if.condition.user.email.domain.name">
         <icon-class>user</icon-class>
         <requires>
             <require>user</require>
         </requires>
-        <visualiser class="com.atlassian.plugins.tutorial.servicedesk.if.UserEmailDomainIfConditionVisualiser" />
-        <validator class="com.atlassian.plugins.tutorial.servicedesk.if.UserEmailDomainIfConditionValidator"/>
-        <web-form-module>servicedesk/settings/automation/tutorial/modules/if/user-email-domain-if-condition-form</web-form-module>
+        <visualiser class="com.atlassian.plugins.tutorial.servicedesk.ruleif.UserEmailDomainIfConditionVisualiser" />
+        <validator class="com.atlassian.plugins.tutorial.servicedesk.ruleif.UserEmailDomainIfConditionValidator"/>
+        <web-form-module>servicedesk/settings/automation/tutorial/modules/ruleif/useremaildomain-if-condition-form</web-form-module>
     </automation-rule-if-condition>
+
+    <client-resource key="servicedesk-modules-automation-resources">
+        <context>sd.agent.view</context>
+        <directory location="servicedesk/settings/automation/tutorial/modules" />
+    </client-resource>
     
 </atlassian-plugin>
