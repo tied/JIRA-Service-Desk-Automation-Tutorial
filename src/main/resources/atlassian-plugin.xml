@@ -46,7 +46,7 @@
     </automation-rule-then-action>
 
     <client-resource key="servicedesk-modules-automation-resources">
-        <context>sd.agent.view</context>
+        <context>sd.project.admin</context>
         <directory location="servicedesk/settings/automation/tutorial/modules" />
     </client-resource>
     
