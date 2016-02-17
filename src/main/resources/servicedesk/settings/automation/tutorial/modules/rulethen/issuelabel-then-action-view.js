@@ -3,13 +3,11 @@ define("servicedesk/settings/automation/tutorial/modules/rulethen/issue-label-th
     "servicedesk/jQuery",
     "servicedesk/underscore",
     "servicedesk/backbone-brace",
-    "servicedesk/util/tracking",
     "servicedesk/shared/mixin/form/form-mixin"
 ], function (
         $,
         _,
         Brace,
-        tracker,
         FormMixin
 ) {
     return Brace.View.extend({
