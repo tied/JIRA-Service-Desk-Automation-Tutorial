@@ -3,7 +3,7 @@ define("servicedesk/settings/automation/tutorial/modules/ruleif/useremaildomain-
     "servicedesk/jQuery",
     "servicedesk/underscore",
     "servicedesk/backbone-brace",
-    "servicedesk/shared/mixin/form/form-mixin"
+    "servicedesk/internal-api/core/util/form-mixin/form-mixin"
 ], function (
         $,
         _,
